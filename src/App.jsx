@@ -1,9 +1,8 @@
-import "./App.css";
-
 import { GiBoba } from "react-icons/gi";
 import Product from "./Product";
 import { data } from "./data";
 import { nanoid } from "nanoid";
+import "./input.css";
 
 function DisplayAllProducts() {
   return data.map((item) => <Product data={item} key={nanoid()} />);
@@ -11,20 +10,16 @@ function DisplayAllProducts() {
 
 function App() {
   return (
-    <div className="App-container">
-      <div className="header-container">
-        <div className="header__img-container">
-          <GiBoba size="4rem" />
-        </div>
-        <div className="header__discription-container">
-          <h2>About my company</h2>
-          <p>
-            Here is the random text that goes in the header about boba tea.Then
-            i Keep writting and it doesnt stop becuase i keep going.
-          </p>
-        </div>
+    <div className="bg-blue-500 w-screen h-screen">
+      <GiBoba size="" />
+      <div className="">
+        <h2 className="text-lg">About my company</h2>
+        <p>
+          Here is the random text that goes in the header about boba tea.Then i
+          Keep writting and it doesnt stop becuase i keep going.
+        </p>
       </div>
-      <div className="products">
+      <div className="">
         <DisplayAllProducts />
       </div>
     </div>
